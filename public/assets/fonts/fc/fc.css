@@ -1,0 +1,56 @@
+@font-face{
+font-family:"FCZizouSans";
+src:url(fczizou_sans-regular-webfont.eot?) format("embedded-opentype"),url(fczizou_sans-regular-webfont.woff) format("woff"),url(fczizou_sans-regular-webfont.svg) format("svg"),url(fczizou_sans-regular-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:400;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCZizouSans";
+src:url(fczizou_sans-medium-webfont.eot?) format("embedded-opentype"),url(fczizou_sans-medium-webfont.woff) format("woff"),url(fczizou_sans-medium-webfont.svg) format("svg"),url(fczizou_sans-medium-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:500;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCZizouSlab";
+src:url(fczizou_slab-light-webfont.eot?) format("embedded-opentype"),url(fczizou_slab-light-webfont.woff) format("woff"),url(fczizou_slab-light-webfont.svg) format("svg"),url(fczizou_slab-light-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:200;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCZizouSlab";
+src:url(fczizou_slab-regular-webfont.eot?) format("embedded-opentype"),url(fczizou_slab-regular-webfont.woff) format("woff"),url(fczizou_slab-regular-webfont.svg) format("svg"),url(fczizou_slab-regular-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:400;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCZizouSlab";
+src:url(fczizou_slab-medium-webfont.eot?) format("embedded-opentype"),url(fczizou_slab-medium-webfont.woff) format("woff"),url(fczizou_slab-medium-webfont.svg) format("svg"),url(fczizou_slab-medium-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:500;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCZizouSlab";
+src:url(fczizou_slab-bold-webfont.eot?) format("embedded-opentype"),url(fczizou_slab-bold-webfont.woff) format("woff"),url(fczizou_slab-bold-webfont.svg) format("svg"),url(fczizou_slab-bold-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:700;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCKaiser";
+src:url(fckaiser-regular-webfont.eot?) format("embedded-opentype"),url(fckaiser-regular-webfont.woff) format("woff"),url(fckaiser-regular-webfont.svg) format("svg"),url(fckaiser-regular-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:400;
+font-stretch:normal;
+}
+@font-face{
+font-family:"FCKaiser";
+src:url(fckaiser-medium-webfont.eot?) format("embedded-opentype"),url(fckaiser-medium-webfont.woff) format("woff"),url(fckaiser-medium-webfont.svg) format("svg"),url(fckaiser-medium-webfont.ttf) format("opentype");
+font-style:normal;
+font-weight:500;
+font-stretch:normal;
+}

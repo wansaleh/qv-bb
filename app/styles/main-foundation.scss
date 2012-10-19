@@ -1,0 +1,37 @@
+@import "foundation/base";
+@import "foundation/tweaks";
+@import "font-awesome";
+
+// Main styles
+
+html {
+  font-size: $baseFontSize;
+}
+
+#main {
+  padding: 3rem 0 5rem;
+}
+
+.suras {
+  .button {
+    margin-bottom: 4px;
+  }
+}
+
+.ayas-wrapper {
+  .home {
+
+  }
+  .ayas {
+    margin-top: 3rem;
+
+    .row-wrapper {
+      padding: 2rem 0;
+      border-bottom: 1px solid #e0e9e7;
+
+      &:nth-child(2n) {
+        background: #f6f9f8;
+      }
+    }
+  }
+}

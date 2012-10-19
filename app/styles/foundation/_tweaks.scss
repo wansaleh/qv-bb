@@ -1,0 +1,46 @@
+// Some Foundation tweaks
+
+$buttonInset:  inset 0 1px 0 rgba(#fff, .15);
+$buttonShadow: 0 1px 4px rgba(#000, .2);
+
+@mixin button-glossy($color: $mainColor, $height: 14px) {
+  background: $color;
+  border: 1px solid darken($color, 5%);
+  @include box-shadow(inset 0 $height 0 rgba(#fff, .15), $buttonInset, $buttonShadow);
+}
+
+.button { width: auto; background: $mainColor; border: 1px solid darken(($mainColor), 15%); @include box-shadow(0 1px 0 $shinyEdge inset); color: $white; cursor: pointer; display: inline-block; font-family: $bodyFontFamily; font-size: ms(0); font-weight: bold; line-height: 1; margin: 0; outline: none; padding: $btnBase ($btnBase * 2) ($btnBase + 1); position: relative; text-align: center; text-decoration: none; @include single-transition(background-color, .15s, ease-in-out);
+
+  /* Hovers */
+  &:hover { color: $white; background-color: darken(($mainColor), 10%); }
+  &:active  { @include box-shadow(0 1px 0 $darkEdge inset); }
+  &:focus { @include box-shadow(0 0 4px opacify($mainColor, 0.3), 0 1px 0 $shinyEdge inset); color: $white; }
+
+  /* Sizes */
+  &.large     { font-size: ms(1); padding: ($largeBtnBase) ($largeBtnBase * 2) ($largeBtnBase + 1); }
+  &.medium    { font-size: ms(0); }
+  &.small     { font-size: ms(0) - 3; padding: ($smallBtnBase) ($smallBtnBase * 2) ($smallBtnBase + 1); }
+  &.tiny      { font-size: ms(0) - 4; padding: ($tinyBtnBase) ($tinyBtnBase * 2) ($tinyBtnBase + 1); }
+  &.expand    { width: 100%; text-align: center; }
+
+  /* Colors */
+  &.primary { background-color: $mainColor; border: 1px solid darken(($mainColor), 15%);
+    &:hover { background-color: darken(($mainColor), 10%); }
+    &:focus { @include box-shadow(0 0 4px opacify($mainColor, 0.3), 0 1px 0 $shinyEdge inset); }
+  }
+  &.success { background-color: $successColor; border: 1px solid darken(($successColor), 15%);
+    &:hover { background-color: darken(($successColor), 10%); }
+    &:focus { @include box-shadow(0 0 5px opacify($successColor, 0.4), 0 1px 0 $shinyEdge inset); }
+  }
+  &.alert { background-color: $alertColor; border: 1px solid darken(($alertColor), 15%);
+    &:hover { background-color: darken(($alertColor), 10%); }
+    &:focus { @include box-shadow(0 0 4px opacify($alertColor, 0.3), 0 1px 0 $shinyEdge inset); }
+  }
+  &.secondary { background-color: $secondaryColor; color: darken(($secondaryColor), 80%); border: 1px solid darken(($secondaryColor), 15%);
+    &:hover { background-color: darken(($secondaryColor), 10%); }
+    &:focus { @include box-shadow(0 0 5px opacify($secondaryColor, 0.5), 0 1px 0 $shinyEdge inset); }
+  }
+
+  // Tweak
+  @include button-glossy($mainColor, 15px);
+}

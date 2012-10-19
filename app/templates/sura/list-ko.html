@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>
+        QuranVue
+        <small>Bismillahirrahmanirrahim</small>
+        <small class="arab">بسم ٱلله ٱلرحمٰن ٱلرحيم</small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="suras">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="ko-suras" data-bind="foreach: suras">
+          <a class="btn btn-primary btn-round" data-bind="attr:{href:permalink}">
+            <strong data-bind="text:id"></strong>
+            <span data-bind="text:tname"></span>
+            <span data-bind="text:name"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

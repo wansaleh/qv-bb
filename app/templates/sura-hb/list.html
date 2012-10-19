@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>
+        QuranVue
+        <small>Bismillahirrahmanirrahim</small>
+        <small class="arab">بسم ٱلله ٱلرحمٰن ٱلرحيم</small>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="suras">
+  <div class="container">
+    <div class="row">
+      <div class="span12" data-bind="foreach: ko_suras">
+        {{#each suras}}
+          <a class="btn btn-primary btn-round" href="{{permalink}}">
+            <strong>{{id}}</strong>
+            {{tname}}
+            {{name}}
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

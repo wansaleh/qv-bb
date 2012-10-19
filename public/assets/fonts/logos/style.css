@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'logos';
+	src: url('fonts/logos.eot?#') format('eot'),
+		url('fonts/logos.svg#logos') format('svg'),
+		url('fonts/logos.woff') format('woff'),
+		url('fonts/logos.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'logos';
+	content: attr(data-icon);
+	speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'logos';
+	font-style: normal;
+	speak: none;
+}
+.icon-html5:before {
+	content: "\e000";
+}
+.icon-html5-2:before {
+	content: "\e001";
+}
+.icon-css3:before {
+	content: "\e002";
+}
+.icon-creative-commons:before {
+	content: "\e003";
+}
+*/

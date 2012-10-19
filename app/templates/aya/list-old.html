@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="twelve columns">
+    <h1>
+      <%= title %>
+      <small><a href="#">&laquo; Back home</a></small>
+    </h1>
+  </div>
+</div>
+
+<div class="ayas">
+  <% ayas.each(function(aya) { %>
+    <div class="row">
+      <div class="twelve columns">
+        <p class="text"><%= aya.get('text') %></p>
+        <p class="translation"><%= aya.get('translation') %></p>
+      </div>
+    </div>
+  <% }) %>
+</div>

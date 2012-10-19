@@ -1,0 +1,23 @@
+/ Console
+#console
+  .test
+    %button.btn.btn-small#show(data-bind="disable: messageVisible") Reveal Text
+    %button.btn.btn-small#reset(data-bind="enable: messageVisible") Reset
+    %p(data-bind="visible: messageVisible")
+      You will see this message only when "messageVisible" holds a true value.
+
+    %div
+      Mode of Transport:
+      %select(data-bind="value: transport")
+        %option(value="car") Car
+        %option(value="boat") Boat
+        %option(value="train") Train
+    %div
+      You selected:
+      %span(data-bind="text: transport")
+
+/ Main container.
+#main(role="main")
+
+/ Application source.
+%script(data-main="/app/scripts/config" src="/assets/js/libs/require.js")

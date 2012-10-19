@@ -1,0 +1,62 @@
+<div class="page-header fixed">
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <h1 class="title">
+          <a href="/">
+            <%= tname %>
+            <small><%= ename %></small>
+            <small class="arab"><%= name %></small>
+          </a>
+        </h1>
+      </div>
+      <div class="span4">
+        <div class="links pull-right">
+
+          <% if (prevlink) { %>
+            <a href="<%= prevlink %>">Previous</a>
+          <% } else { %>
+            <span class="muted">Previous</span>
+          <% } %>
+
+          <% if (nextlink) { %>
+            <a href="<%= nextlink %>">Next</a>
+          <% } else { %>
+            <span class="muted">Next</span>
+          <% } %>
+
+          <a class="home btn btn-info btn-small btn-round" href="/">
+            <i class="icon-home"></i>
+            Home
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ayas-container">
+  <% if (!alfatihah) { %>
+
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="bismillah">
+          <!-- <div class="image"><img src="/assets/images/ayas/bismillah-center.png" alt=""></div> -->
+          <h2 class="center">
+            <span class="arab">بسم ٱلله ٱلرحمٰن ٱلرحيم</span>
+          </h2>
+          <h2 class="translation center">
+            Bismillahirrahmanirrahim<br>
+            <small>In the name of Allah, the Entirely Merciful, the Especially Merciful.</small>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% } %>
+
+  <div class="ayas"></div>
+</div>

@@ -1,0 +1,210 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,800,700,600";
+@import "/assets/fonts/ff-enzo-web.css";
+
+@import "variables";
+@import "bootstrap/lib/bootstrap";
+// @import "bootstrap/lib/responsive";
+@import "font-awesome";
+@import "compass";
+
+// =================================================================================================
+// webfonts
+// =================================================================================================
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Scheherazade';
+  src: url('/assets/fonts/scheherazaderegot.eot');
+  src: url('/assets/fonts/scheherazaderegot.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/scheherazaderegot.woff') format('woff'),
+       url('/assets/fonts/scheherazaderegot.ttf') format('truetype'),
+       url('/assets/fonts/scheherazaderegot.svg#scheherazaderegot') format('svg');
+}
+
+// =================================================================================================
+// Tweaks
+// =================================================================================================
+
+@mixin button-glossy($height: 13px) {
+  @include box-shadow(inset 0 $height 0 rgba(#fff, .1), inset 0 1px 0 rgba(#fff, .2), 0 1px 3px rgba(#000, .15));
+}
+
+.btn-gray {
+  $bg: darken($btnBackground, 20%);
+  $bgh: darken($btnBackgroundHighlight, 20%);
+  @include buttonBackground($bg, $bgh, $grayDark, 0 1px 1px rgba(255,255,255,.75));
+  border-color: transparent;
+}
+
+.btn { @include button-glossy; }
+.btn-small { @include button-glossy(11px); }
+.btn-medium { @include button-glossy(13px); }
+.btn-large { @include button-glossy(17px); }
+
+.btn-round { @include border-radius(50px); }
+
+// =================================================================================================
+// Utility classes
+// =================================================================================================
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.arab {
+  font-size: 1.1em;
+  font-family: 'Scheherazade';
+  direction: rtl;
+  line-height: .8;
+}
+
+// =================================================================================================
+// Body and structure
+// =================================================================================================
+
+html {
+  height: 100%;
+  font-size: $baseFontSize;
+}
+body {
+  position: relative;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+// =================================================================================================
+// Main styles
+// =================================================================================================
+
+#console {
+  display: none;
+  position: fixed;
+  top: 110px;
+  right: 1rem;
+  width: 20%;
+  padding: 5px;
+  background-color: #eee;
+  @include background-image(linear-gradient(top, #eee, #ddd));
+  @include box-shadow(0 1px 5px #ccc, inset 0 1px 0 #fff);
+  @include border-radius(4px);
+  border: 1px solid #ccc;
+  font-size: .8rem;
+  line-height: 1.4;
+  opacity: .9;
+  z-index: 10000;
+}​
+
+#main {
+  padding: 0 0 5rem;
+}
+
+.index-wrapper {
+  padding-top: 4rem;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .suras {
+    .btn {
+      margin-right: 4px;
+      margin-bottom: 4px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.ayas-wrapper {
+  position: relative;
+
+  .page-header.fixed {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 20px;
+    background: rgba(#fff, .9);
+    @include box-shadow(0 1px 10px rgba(#000, .1));
+
+    h1 {
+      a {
+        color: $textColor;
+        text-decoration: none;
+      }
+    }
+
+    .links {
+      margin-top: 13px;
+
+      a, span, .btn {
+        font-size: 13px;
+        // margin-right: 14px;
+        padding: 2px 12px 3px;
+      }
+
+      a:not(.btn) {
+        color: $textColor;
+        display: inline-block;
+        padding-left: 0;
+      }
+
+      .btn {
+        font-weight: bold;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .ayas-container {
+    padding-top: 8rem;
+
+    .bismillah .arab {
+      font-size: 2.5rem;
+    }
+  }
+
+  .ayas {
+    margin-top: 3rem;
+
+    .aya-wrapper {
+      padding: 2rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.7;
+
+      &:nth-child(2n) {
+        background: #f7f7fc;
+      }
+
+      .image {
+        display: none;
+      }
+
+      .text {
+        font-size: 2.5rem;
+        line-height: 1.4;
+
+        .number {
+          font-size: 2.25rem;
+          letter-spacing: -4px;
+          @include background-image(linear-gradient(top, $btnInverseBackground, $btnInverseBackgroundHighlight));
+          // padding: 0 10px 0 8px;
+          text-align: center;
+          line-height: 40px;
+          height: 40px;
+          width: 40px;
+          display: inline-block;
+          @include border-radius(40px);
+          @include button-glossy(20px);
+          // border: 2px solid #fff;
+          color: #fff;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
