@@ -6,3 +6,5 @@
 *.out
 ## sass-cache
 .sass-cache/
+
+app/styles/bootsrap/
